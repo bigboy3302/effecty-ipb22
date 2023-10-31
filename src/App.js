@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-      <ToDo />
+      <ToDo  {...toDo}
+      />
     </>
   );
 }

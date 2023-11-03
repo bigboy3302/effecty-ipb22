@@ -1,4 +1,5 @@
-import React, { useState} from 'react';
+import React, { useEffect ,useState} from 'react';
+
 function ToDo(props) {
   const [rupucis, setRupucis] = useState(props.completed);
   function handleChange(event){
@@ -7,7 +8,7 @@ function ToDo(props) {
   return (
     <>
       <p>UserId: {props.userId}</p>
-      <p>Id: {props.Id}</p>
+      <p>Id:{props.id}</p>
       <p>title:{props.title}</p>
        <input type="checkbox" 
         checked={rupucis} onChange={handleChange} 

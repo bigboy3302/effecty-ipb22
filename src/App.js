@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import ToDo from "./ToDo";
 import Comment  from "./Comment";
-import { useEffect, useState } from "react";
+import Post from "./Post";
+import PostsList from "./PostsList"
 
 function App() {
   const [toDo, setToDo] = useState({});
@@ -28,10 +30,12 @@ function App() {
 
   return (
     <>
-      {loading ? <p>BIGBOY...</p> : <ToDo  {...toDo}/>}
-     <Comment/>
+    
+     {/* {loading ? <p>loadinggg</p> : <Comment {...Comment}/>} */}
+     <Post />
+     <PostsList />
     </>
   );
   }
-
+  //{loading ? <p>BIGBOY...</p> : <ToDo  {...toDo}/>}
 export default App;
